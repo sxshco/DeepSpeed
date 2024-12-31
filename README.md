@@ -57,7 +57,7 @@ You can test the DeepSpeed-Inference function by running
 ```bash
 deepspeed --num_gpus n benchmark.py
 ```
-'n' could be the number of the gpus you would like to test. You may need to customize your own test inputs. Make sure you have a transformers downloaded locally.
+`n` could be the number of the gpus you would like to test. You may need to customize your own test inputs. Make sure you have a transformers downloaded locally.
 
 ## Result and fig
 We have added the raw result and code for plotting in `plot.ipynb`. You can just check it or run it.
