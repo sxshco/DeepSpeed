@@ -40,3 +40,24 @@ Windows support is partially supported with DeepSpeed. On Windows you can build 
 2. Install visual cpp build tools, such as VS2019 C++ x64/x86 build tools
 3. Launch cmd console with Administrator privilege for creating required symlink folders
 4. Run `python setup.py bdist_wheel` to build wheel in `dist` folder
+
+# Experiment
+
+The code involved in the experiment includes `zero.py`, `benchmark.py`, and `plot.ipynb`.
+
+## ZeRo-Inference
+You can test the ZeRo-Inference function by running
+```bash
+deepspeed --num_gpus 1 zero.py
+```
+and you can edit the GPU environment in code. Make sure you have a transformers downloaded locally.
+
+## DeepSpeed-Inference
+You can test the DeepSpeed-Inference function by running
+```bash
+deepspeed --num_gpus n benchmark.py
+```
+'n' could be the number of the gpus you would like to test. You may need to customize your own test inputs. Make sure you have a transformers downloaded locally.
+
+## Result and fig
+We have added the raw result and code for plotting in `plot.ipynb`. You can just check it or run it.
